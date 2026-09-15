@@ -2,8 +2,10 @@
 .pixi/*
 !.pixi/config.toml
 
-# rebuildable via `pixi run build-julia`
+# rebuildable via `pixi run build-julia` / `pixi run build-mojo`
+# (also not portable: RPATH/shared-library dependent on the local pixi env)
 /sieve_julia
+/sieve_mojo
 
 # debug/setup artifacts, not part of the benchmark comparison
 *_strace.txt

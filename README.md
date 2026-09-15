@@ -14,12 +14,17 @@ All three take the same CLI arguments: `<limit> [new_limit]`.
 
 ```
 pixi run build-julia   # produces ./sieve_julia
+pixi run build-mojo    # produces ./sieve_mojo
 ```
 
-This installs the `JuliaC` app (`pixi run install-juliac`, a one-time step)
-and then invokes it to AOT-compile and trim `sieve.jl` into a standalone
-executable. `sieve_mojo` is checked in as a pre-built binary (see
-`mojo_strace.txt` / `pyenv_strace.txt` for how the environments were set up).
+`build-julia` installs the `JuliaC` app (`pixi run install-juliac`, a
+one-time step) and then invokes it to AOT-compile and trim `sieve.jl` into a
+standalone executable. Neither binary is checked into git: both embed an
+`RPATH` pointing at this project's local `.pixi/envs/default/lib` and
+dynamically link against runtime shared libraries from that exact
+environment, so they aren't portable across machines or even across a
+`pixi clean` — rebuild them locally instead. (See `mojo_strace.txt` /
+`pyenv_strace.txt` for how the environments were originally set up.)
 
 ## Benchmarks
 

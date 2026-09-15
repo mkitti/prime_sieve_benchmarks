@@ -12,9 +12,10 @@ install-juliac = "julia --startup-file=no -e 'using Pkg; mkpath(dirname(Base.act
 build-julia = { cmd = "$(julia -e 'print(joinpath(Sys.BINDIR, \"..\", \"share\", \"julia\", \"bin\", \"juliac\"))') --output-exe sieve_julia --experimental --trim=safe sieve.jl", depends-on = [
     "install-juliac",
 ] }
+build-mojo = "mojo build sieve.mojo -o sieve_mojo"
 
 [dependencies]
-max = ">=26.5.0,<27"
 hyperfine = ">=1.20.0,<2"
 python = ">=3.12.14,<3.13"
 julia = "1.13.*"
+mojo-compiler = ">=1.0.0,<2"
