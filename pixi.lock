@@ -22,7 +22,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/gmp-6.3.0-hfd2156b_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/hyperfine-1.20.0-hf19af3b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/icu-78.3-py310h44b86e0_2.conda
-      - conda: https://conda.anaconda.org/conda-forge/linux-64/julia-1.12.7-h192eb0c_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/julia-1.13.0-h192eb0c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/keyutils-1.6.3-h7cc23a3_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/krb5-1.22.2-hbc21106_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_102.conda
@@ -247,9 +247,9 @@ packages:
     - icu >=78.3,<79.0a0
   size: 14459115
   timestamp: 1786545741408
-- conda: https://conda.anaconda.org/conda-forge/linux-64/julia-1.12.7-h192eb0c_0.conda
-  sha256: dc4b6ae4b0d2145447af968c802e59e826069e11a8dc4346504636228b4b8397
-  md5: 8407fb829f0e8a8569c6f0edacae1ee0
+- conda: https://conda.anaconda.org/conda-forge/linux-64/julia-1.13.0-h192eb0c_0.conda
+  sha256: cd220fb110bebfe3d9b9317dfed8d87bb84b678c9433723f3c891e3d506d213f
+  md5: f82378b0b694727398e51d425f7f3ae9
   depends:
   - __glibc >=2.17,<3.0.a0
   - arpack >=3.9.1,<3.10.0a0 nompi_*
@@ -292,8 +292,8 @@ packages:
   license: MIT
   license_family: MIT
   run_exports: {}
-  size: 176587977
-  timestamp: 1788324893615
+  size: 185712465
+  timestamp: 1789144241936
 - conda: https://conda.anaconda.org/conda-forge/linux-64/keyutils-1.6.3-h7cc23a3_1.conda
   sha256: dd053c96dcb0dcfd59422aefea9d2fe937a190167f34fba7893ec1e10a7e8963
   md5: ba55d1b89fd7775e67de8291029b4059
