@@ -1,0 +1,9 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# rebuildable via `pixi run build-julia`
+/sieve_julia
+
+# debug/setup artifacts, not part of the benchmark comparison
+*_strace.txt
